@@ -1,4 +1,4 @@
-// ⚡ IRISLite — Extension Popup Controller
+// ⚡ Kytiris — Extension Popup Controller
 
 document.addEventListener('DOMContentLoaded', () => {
   const ids = {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   } else {
     try {
-      const saved = localStorage.getItem('__IRISLITE_SETTINGS__');
+      const saved = localStorage.getItem('__KYTIRIS_SETTINGS__');
       applyToUI(saved ? JSON.parse(saved) : defaultSettings);
     } catch (e) {
       applyToUI(defaultSettings);
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
       chrome.storage.local.set(current);
     }
     try {
-      localStorage.setItem('__IRISLITE_SETTINGS__', JSON.stringify(current));
+      localStorage.setItem('__KYTIRIS_SETTINGS__', JSON.stringify(current));
     } catch (e) {}
 
     // Send update message to active IRIS tabs
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
               target: { tabId: tab.id },
               func: (settings) => {
                 window.postMessage({
-                  type: '__IRISLITE_UPDATE_SETTINGS__',
+                  type: '__KYTIRIS_UPDATE_SETTINGS__',
                   settings
                 }, '*');
               },

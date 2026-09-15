@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "IRISLite — FBR IRIS 2.0 Speed Booster",
+  "name": "Kytiris — FBR IRIS 2.0 Speed Booster",
   "version": "2.0.0",
   "description": "Accelerates FBR IRIS form by 10x via Webpack AES memoization and CSS optimization. Overrides custom window event listeners blocking standard browser accessibility/inspection tools.",
   "icons": {
@@ -10,7 +10,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "IRISLite Settings"
+    "default_title": "Kytiris Settings"
   },
   "permissions": [
     "storage",

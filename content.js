@@ -1,14 +1,14 @@
-// ⚡ IRISLite — FBR IRIS 2.0 Speed Booster & Lag Fixer
+// ⚡ Kytiris — FBR IRIS 2.0 Speed Booster & Lag Fixer
 // Main engine running in MAIN world context directly on https://iris.fbr.gov.pk/*
 
-function initIrisLiteEngine() {
-  if (window.__IRISLITE_LOADED__) return;
-  window.__IRISLITE_LOADED__ = true;
+function initKytirisEngine() {
+  if (window.__KYTIRIS_LOADED__) return;
+  window.__KYTIRIS_LOADED__ = true;
 
-  console.log("⚡ [IRISLite] Speed Booster Engine Active in MAIN World Scope!");
+  console.log("⚡ [Kytiris] Speed Booster Engine Active in MAIN World Scope!");
 
   // Global settings state
-  window.__IRISLITE_SETTINGS__ = {
+  window.__KYTIRIS_SETTINGS__ = {
     memoizationEnabled: true,
     unblockDevTools: true,
     killAnimations: true,
@@ -17,9 +17,9 @@ function initIrisLiteEngine() {
 
   // Load saved settings
   try {
-    const saved = localStorage.getItem('__IRISLITE_SETTINGS__');
+    const saved = localStorage.getItem('__KYTIRIS_SETTINGS__');
     if (saved) {
-      Object.assign(window.__IRISLITE_SETTINGS__, JSON.parse(saved));
+      Object.assign(window.__KYTIRIS_SETTINGS__, JSON.parse(saved));
     }
   } catch (e) {}
 
@@ -33,14 +33,14 @@ function initIrisLiteEngine() {
   // (Overrides custom window event listeners blocking standard browser accessibility/inspection tools)
   // ─────────────────────────────────────────────────────────────────────────────
   window.addEventListener('keydown', function (e) {
-    if (!window.__IRISLITE_SETTINGS__.unblockDevTools) return;
+    if (!window.__KYTIRIS_SETTINGS__.unblockDevTools) return;
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C'))) {
       e.stopImmediatePropagation();
     }
   }, true);
 
   window.addEventListener('contextmenu', function (e) {
-    if (!window.__IRISLITE_SETTINGS__.unblockDevTools) return;
+    if (!window.__KYTIRIS_SETTINGS__.unblockDevTools) return;
     e.stopImmediatePropagation();
   }, true);
 
@@ -62,7 +62,7 @@ function initIrisLiteEngine() {
       if (encMod && encMod.L && typeof encMod.L.decrypt === 'function' && !encMod.L.decrypt.__patched) {
         const origDecrypt = encMod.L.decrypt;
         const patched = function (k, b) {
-          if (!window.__IRISLITE_SETTINGS__.memoizationEnabled) {
+          if (!window.__KYTIRIS_SETTINGS__.memoizationEnabled) {
             return origDecrypt.call(this, k, b);
           }
           const cacheKey = b + ':' + k;
@@ -77,7 +77,7 @@ function initIrisLiteEngine() {
         };
         patched.__patched = true;
         encMod.L.decrypt = patched;
-        console.log("⚡ [IRISLite] Webpack AES Decrypt hooked & memoized!");
+        console.log("⚡ [Kytiris] Webpack AES Decrypt hooked & memoized!");
       }
     } catch (e) {}
   }
@@ -121,11 +121,11 @@ function initIrisLiteEngine() {
   // 4. CSS ANIMATION & TRANSITION KILLER
   // ─────────────────────────────────────────────────────────────────────────────
   function updateAnimationStyles() {
-    let style = document.getElementById('irislite-speed-boost-style');
-    if (window.__IRISLITE_SETTINGS__.killAnimations && isReturnPage()) {
+    let style = document.getElementById('kytiris-speed-boost-style');
+    if (window.__KYTIRIS_SETTINGS__.killAnimations && isReturnPage()) {
       if (!style) {
         style = document.createElement('style');
-        style.id = 'irislite-speed-boost-style';
+        style.id = 'kytiris-speed-boost-style';
         style.innerHTML = `
           * {
             transition: none !important;
@@ -143,15 +143,15 @@ function initIrisLiteEngine() {
   // 5. SMALL SUBTLE THUNDER EMOJI INDICATOR
   // ─────────────────────────────────────────────────────────────────────────────
   function updateBadgeUI() {
-    let badge = document.getElementById('irislite-badge');
-    if (!window.__IRISLITE_SETTINGS__.showBadge || !isReturnPage()) {
+    let badge = document.getElementById('kytiris-badge');
+    if (!window.__KYTIRIS_SETTINGS__.showBadge || !isReturnPage()) {
       if (badge) badge.remove();
       return;
     }
 
     if (!badge) {
       badge = document.createElement('div');
-      badge.id = 'irislite-badge';
+      badge.id = 'kytiris-badge';
       badge.style.cssText = `
         position: fixed;
         bottom: 10px;
@@ -168,7 +168,7 @@ function initIrisLiteEngine() {
       badge.onmouseleave = function () { badge.style.opacity = '0.35'; };
       badge.onclick = function () {
         alert(
-          `⚡ IRISLite Active!\n\n` +
+          `⚡ Kytiris Active!\n\n` +
           `• Decryptions Saved: ${decryptionsSaved}\n` +
           `• Speed Factor: 10x - 15x Faster\n` +
           `• DevTools & Right-Click: Unblocked\n` +
@@ -179,13 +179,13 @@ function initIrisLiteEngine() {
     }
 
     badge.innerHTML = '⚡';
-    badge.title = `⚡ IRISLite Active (${decryptionsSaved} decryptions saved)`;
+    badge.title = `⚡ Kytiris Active (${decryptionsSaved} decryptions saved)`;
   }
 
   function updateBadgeStats() {
-    const badge = document.getElementById('irislite-badge');
+    const badge = document.getElementById('kytiris-badge');
     if (badge) {
-      badge.title = `⚡ IRISLite Active (${decryptionsSaved} decryptions saved)`;
+      badge.title = `⚡ Kytiris Active (${decryptionsSaved} decryptions saved)`;
     }
   }
 
@@ -208,33 +208,33 @@ function initIrisLiteEngine() {
 
   // Listen for settings updates from extension popup
   window.addEventListener('message', function (event) {
-    if (event.data && event.data.type === '__IRISLITE_UPDATE_SETTINGS__') {
-      Object.assign(window.__IRISLITE_SETTINGS__, event.data.settings);
+    if (event.data && event.data.type === '__KYTIRIS_UPDATE_SETTINGS__') {
+      Object.assign(window.__KYTIRIS_SETTINGS__, event.data.settings);
       try {
-        localStorage.setItem('__IRISLITE_SETTINGS__', JSON.stringify(window.__IRISLITE_SETTINGS__));
+        localStorage.setItem('__KYTIRIS_SETTINGS__', JSON.stringify(window.__KYTIRIS_SETTINGS__));
       } catch (e) {}
       updateAnimationStyles();
       updateBadgeUI();
     }
   });
 
-  console.log("✅ [IRISLite] Active & Monitoring!");
+  console.log("✅ [Kytiris] Active & Monitoring!");
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
 // EXECUTION ROUTER: MAIN World direct execution with inline <script> fallback
 // ─────────────────────────────────────────────────────────────────────────────
-if (typeof window !== 'undefined' && window.__IRISLITE_LOADED__) {
+if (typeof window !== 'undefined' && window.__KYTIRIS_LOADED__) {
   // Already loaded in this scope
 } else if (typeof document !== 'undefined' && document.documentElement && typeof window.webpackChunkweb_ui === 'undefined') {
   try {
     const script = document.createElement('script');
-    script.textContent = `(${initIrisLiteEngine.toString()})();`;
+    script.textContent = `(${initKytirisEngine.toString()})();`;
     (document.head || document.documentElement).appendChild(script);
     script.remove();
   } catch (e) {
-    initIrisLiteEngine();
+    initKytirisEngine();
   }
 } else {
-  initIrisLiteEngine();
+  initKytirisEngine();
 }

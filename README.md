@@ -10,23 +10,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/ayan-sketch/IRISLite">
-    <img src="images/irislite_logo.png" alt="IRISLite Logo" width="120" height="120">
+  <a href="https://github.com/ayan-sketch/Kytiris">
+    <img src="images/kytiris_logo.png" alt="Kytiris Logo" width="120" height="120">
   </a>
 
-  <h3 align="center">IRISLite ⚡</h3>
+  <h3 align="center">Kytiris ⚡</h3>
 
   <p align="center">
     An ultra-fast, zero-footprint browser extension accelerating the FBR IRIS 2.0 Return Filing Portal UI by up to 15x.
     <br />
-    <a href="https://github.com/ayan-sketch/IRISLite"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ayan-sketch/Kytiris"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ayan-sketch/IRISLite">View Demo</a>
+    <a href="https://github.com/ayan-sketch/Kytiris">View Demo</a>
     &middot;
-    <a href="https://github.com/ayan-sketch/IRISLite/issues">Report Bug</a>
+    <a href="https://github.com/ayan-sketch/Kytiris/issues">Report Bug</a>
     &middot;
-    <a href="https://github.com/ayan-sketch/IRISLite/issues">Request Feature</a>
+    <a href="https://github.com/ayan-sketch/Kytiris/issues">Request Feature</a>
   </p>
 </div>
 
@@ -60,9 +60,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-**IRISLite** is a lightweight Chrome Extension (Manifest V3) specifically engineered for tax professionals, accountants, and taxpayers using Pakistan's Federal Board of Revenue (FBR) IRIS 2.0 portal ([https://iris.fbr.gov.pk](https://iris.fbr.gov.pk)).
+**Kytiris** is a lightweight Chrome Extension (Manifest V3) specifically engineered for tax professionals, accountants, and taxpayers using Pakistan's Federal Board of Revenue (FBR) IRIS 2.0 portal ([https://iris.fbr.gov.pk](https://iris.fbr.gov.pk)).
 
-The native IRIS form suffers from significant input typing lag (~500ms per character) due to synchronous client-side CryptoJS AES decryptions running repeatedly during Angular change detection cycles. **IRISLite** resolves this performance bottleneck by hooking into Webpack module decryptions in memory, reducing input latency down to **~25ms** (10x-15x typing speedup).
+The native IRIS form suffers from significant input typing lag (~500ms per character) due to synchronous client-side CryptoJS AES decryptions running repeatedly during Angular change detection cycles. **Kytiris** resolves this performance bottleneck by hooking into Webpack module decryptions in memory, reducing input latency down to **~25ms** (10x-15x typing speedup).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,7 +93,7 @@ The native IRIS form suffers from significant input typing lag (~500ms per chara
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Follow these simple steps to install IRISLite locally in your browser.
+Follow these simple steps to install Kytiris locally in your browser.
 
 ### Prerequisites
 
@@ -103,7 +103,7 @@ Follow these simple steps to install IRISLite locally in your browser.
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/ayan-sketch/IRISLite.git
+   git clone https://github.com/ayan-sketch/Kytiris.git
    ```
 2. Open your browser and navigate to the extensions page:
    ```text
@@ -111,17 +111,17 @@ Follow these simple steps to install IRISLite locally in your browser.
    ```
 3. Enable **Developer mode** via the toggle switch in the top-right corner.
 4. Click **Load unpacked** in the top-left menu.
-5. Select the `IRISLite` root directory.
-6. Navigate to [https://iris.fbr.gov.pk](https://iris.fbr.gov.pk) — IRISLite will activate automatically!
+5. Select the `Kytiris` root directory.
+6. Navigate to [https://iris.fbr.gov.pk](https://iris.fbr.gov.pk) — Kytiris will activate automatically!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. **Automatic Acceleration:** Once installed, open any return filing form on the IRIS 2.0 portal. IRISLite injects silently at `document_start`.
+1. **Automatic Acceleration:** Once installed, open any return filing form on the IRIS 2.0 portal. Kytiris injects silently at `document_start`.
 2. **Status Indicator:** Look for the small, semi-transparent thunder emoji (`⚡`) at the bottom-right corner of the page. Hover or click it to view live decryption stats.
-3. **Control Popup:** Click the IRISLite icon in your browser toolbar to toggle features (AES Memoization, DevTools Unblocker, CSS Animations, Status Indicator).
+3. **Control Popup:** Click the Kytiris icon in your browser toolbar to toggle features (AES Memoization, DevTools Unblocker, CSS Animations, Status Indicator).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,7 +138,7 @@ Follow these simple steps to install IRISLite locally in your browser.
 <!-- CHROME WEB STORE COMPLIANCE -->
 ## Chrome Web Store Compliance
 
-IRISLite is designed for Manifest V3 store policies:
+Kytiris is designed for Manifest V3 store policies:
 * **Execution World:** Uses `"world": "MAIN"` in `content_scripts` with an inline DOM script injection fallback to safely hook page-scope Webpack chunks.
 * **Event Override Declaration:** Overrides page-level event listeners to restore standard browser accessibility and developer inspection tools (`F12` / `contextmenu`).
 
@@ -170,21 +170,21 @@ Distributed under the Creative Commons Attribution-NonCommercial 4.0 Internation
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/ayan-sketch/IRISLite](https://github.com/ayan-sketch/IRISLite)
+Project Link: [https://github.com/ayan-sketch/Kytiris](https://github.com/ayan-sketch/Kytiris)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/ayan-sketch/IRISLite.svg?style=for-the-badge
-[contributors-url]: https://github.com/ayan-sketch/IRISLite/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ayan-sketch/IRISLite.svg?style=for-the-badge
-[forks-url]: https://github.com/ayan-sketch/IRISLite/network/members
-[stars-shield]: https://img.shields.io/github/stars/ayan-sketch/IRISLite.svg?style=for-the-badge
-[stars-url]: https://github.com/ayan-sketch/IRISLite/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ayan-sketch/IRISLite.svg?style=for-the-badge
-[issues-url]: https://github.com/ayan-sketch/IRISLite/issues
-[license-shield]: https://img.shields.io/github/license/ayan-sketch/IRISLite.svg?style=for-the-badge
-[license-url]: https://github.com/ayan-sketch/IRISLite/blob/main/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/ayan-sketch/Kytiris.svg?style=for-the-badge
+[contributors-url]: https://github.com/ayan-sketch/Kytiris/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ayan-sketch/Kytiris.svg?style=for-the-badge
+[forks-url]: https://github.com/ayan-sketch/Kytiris/network/members
+[stars-shield]: https://img.shields.io/github/stars/ayan-sketch/Kytiris.svg?style=for-the-badge
+[stars-url]: https://github.com/ayan-sketch/Kytiris/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ayan-sketch/Kytiris.svg?style=for-the-badge
+[issues-url]: https://github.com/ayan-sketch/Kytiris/issues
+[license-shield]: https://img.shields.io/github/license/ayan-sketch/Kytiris.svg?style=for-the-badge
+[license-url]: https://github.com/ayan-sketch/Kytiris/blob/main/LICENSE
 [ManifestV3-badge]: https://img.shields.io/badge/Manifest--V3-10b981?style=for-the-badge&logo=googlechrome&logoColor=white
 [ManifestV3-url]: https://developer.chrome.com/docs/extensions/mv3/intro/
 [JS-badge]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black

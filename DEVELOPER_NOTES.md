@@ -1,7 +1,7 @@
-# Chrome Web Store Developer Review Notes for IRISLite
+# Chrome Web Store Developer Review Notes for Kytiris
 
 ## Overview
-IRISLite is a client-side performance acceleration utility designed specifically for taxpayers and tax professionals filing returns on `https://iris.fbr.gov.pk`.
+Kytiris is a client-side performance acceleration utility designed specifically for taxpayers and tax professionals filing returns on `https://iris.fbr.gov.pk`.
 
 ---
 

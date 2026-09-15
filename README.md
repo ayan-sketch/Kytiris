@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ayan-sketch/IRISLite">
-    <img src="images/logo.png" alt="IRISLite Logo" width="120" height="120">
+    <img src="images/irislite_logo.png" alt="IRISLite Logo" width="120" height="120">
   </a>
 
   <h3 align="center">IRISLite ⚡</h3>

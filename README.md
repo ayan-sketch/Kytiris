@@ -5,7 +5,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![CC BY-NC 4.0 License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -163,7 +163,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License. Free to use, modify, and distribute for non-commercial purposes; commercial sale or resale is strictly prohibited. See `LICENSE` for details.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

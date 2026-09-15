@@ -175,15 +175,15 @@ Project Link: [https://github.com/ayan-sketch/Kytiris](https://github.com/ayan-s
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/ayan-sketch/Kytiris.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/badge/Contributors-1-10b981?style=for-the-badge
 [contributors-url]: https://github.com/ayan-sketch/Kytiris/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ayan-sketch/Kytiris.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/badge/Forks-0-0284c7?style=for-the-badge
 [forks-url]: https://github.com/ayan-sketch/Kytiris/network/members
-[stars-shield]: https://img.shields.io/github/stars/ayan-sketch/Kytiris.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/badge/Stars-0-f59e0b?style=for-the-badge
 [stars-url]: https://github.com/ayan-sketch/Kytiris/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ayan-sketch/Kytiris.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/badge/Issues-0%20Open-10b981?style=for-the-badge
 [issues-url]: https://github.com/ayan-sketch/Kytiris/issues
-[license-shield]: https://img.shields.io/github/license/ayan-sketch/Kytiris.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/badge/License-CC%20BY--NC%204.0-10b981?style=for-the-badge
 [license-url]: https://github.com/ayan-sketch/Kytiris/blob/main/LICENSE
 [ManifestV3-badge]: https://img.shields.io/badge/Manifest--V3-10b981?style=for-the-badge&logo=googlechrome&logoColor=white
 [ManifestV3-url]: https://developer.chrome.com/docs/extensions/mv3/intro/

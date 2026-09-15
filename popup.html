@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kytiris</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div class="brand">
+        <div class="icon-glow">⚡</div>
+        <div>
+          <h1>Kytiris</h1>
+          <p class="subtitle">FBR Return Filing Accelerator</p>
+        </div>
+      </div>
+      <div class="badge-online">ACTIVE</div>
+    </div>
+
+    <div class="stats-box">
+      <div class="stat-item">
+        <span class="stat-value" id="speed-factor">15x</span>
+        <span class="stat-label">Typing Speed</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-value" id="latency-val">~25ms</span>
+        <span class="stat-label">Input Latency</span>
+      </div>
+    </div>
+
+    <div class="section-title">SPEED CONTROLS</div>
+
+    <div class="toggles">
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-title">⚡ Webpack AES Memoization</span>
+          <span class="toggle-desc">Caches decryption (10x-15x typing speedup)</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-memoization" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-title">🔓 Unblock DevTools & Inspect</span>
+          <span class="toggle-desc">Enables F12, Ctrl+Shift+I & Right-Click</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-devtools" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-title">🚀 Kill Heavy CSS Animations</span>
+          <span class="toggle-desc">Strips transitions for instant tab switches</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-animations" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-title">🟢 Show Indicator Emoji</span>
+          <span class="toggle-desc">Subtle thunder emoji at bottom-right</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-badge" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>Kytiris v2.0.0</span>
+      <span class="status-indicator">● Speed Booster Active</span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

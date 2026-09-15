@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/ayan-sketch/Kytiris">
+  <a href="https://github.com/ayan-sketch/IRISLite">
     <img src="images/kytiris_logo.png" alt="Kytiris Logo" width="120" height="120">
   </a>
 
@@ -19,14 +19,14 @@
   <p align="center">
     An ultra-fast, zero-footprint browser extension accelerating the FBR IRIS 2.0 Return Filing Portal UI by up to 15x.
     <br />
-    <a href="https://github.com/ayan-sketch/Kytiris"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ayan-sketch/IRISLite"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ayan-sketch/Kytiris">View Demo</a>
+    <a href="https://github.com/ayan-sketch/IRISLite">View Demo</a>
     &middot;
-    <a href="https://github.com/ayan-sketch/Kytiris/issues">Report Bug</a>
+    <a href="https://github.com/ayan-sketch/IRISLite/issues">Report Bug</a>
     &middot;
-    <a href="https://github.com/ayan-sketch/Kytiris/issues">Request Feature</a>
+    <a href="https://github.com/ayan-sketch/IRISLite/issues">Request Feature</a>
   </p>
 </div>
 
@@ -103,7 +103,7 @@ Follow these simple steps to install Kytiris locally in your browser.
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/ayan-sketch/Kytiris.git
+   git clone https://github.com/ayan-sketch/IRISLite.git
    ```
 2. Open your browser and navigate to the extensions page:
    ```text
@@ -170,21 +170,21 @@ Distributed under the Creative Commons Attribution-NonCommercial 4.0 Internation
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/ayan-sketch/Kytiris](https://github.com/ayan-sketch/Kytiris)
+Project Link: [https://github.com/ayan-sketch/IRISLite](https://github.com/ayan-sketch/IRISLite)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/ayan-sketch/Kytiris.svg?style=for-the-badge
-[contributors-url]: https://github.com/ayan-sketch/Kytiris/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ayan-sketch/Kytiris.svg?style=for-the-badge
-[forks-url]: https://github.com/ayan-sketch/Kytiris/network/members
-[stars-shield]: https://img.shields.io/github/stars/ayan-sketch/Kytiris.svg?style=for-the-badge
-[stars-url]: https://github.com/ayan-sketch/Kytiris/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ayan-sketch/Kytiris.svg?style=for-the-badge
-[issues-url]: https://github.com/ayan-sketch/Kytiris/issues
-[license-shield]: https://img.shields.io/github/license/ayan-sketch/Kytiris.svg?style=for-the-badge
-[license-url]: https://github.com/ayan-sketch/Kytiris/blob/main/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/ayan-sketch/IRISLite.svg?style=for-the-badge
+[contributors-url]: https://github.com/ayan-sketch/IRISLite/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ayan-sketch/IRISLite.svg?style=for-the-badge
+[forks-url]: https://github.com/ayan-sketch/IRISLite/network/members
+[stars-shield]: https://img.shields.io/github/stars/ayan-sketch/IRISLite.svg?style=for-the-badge
+[stars-url]: https://github.com/ayan-sketch/IRISLite/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ayan-sketch/IRISLite.svg?style=for-the-badge
+[issues-url]: https://github.com/ayan-sketch/IRISLite/issues
+[license-shield]: https://img.shields.io/github/license/ayan-sketch/IRISLite.svg?style=for-the-badge
+[license-url]: https://github.com/ayan-sketch/IRISLite/blob/main/LICENSE
 [ManifestV3-badge]: https://img.shields.io/badge/Manifest--V3-10b981?style=for-the-badge&logo=googlechrome&logoColor=white
 [ManifestV3-url]: https://developer.chrome.com/docs/extensions/mv3/intro/
 [JS-badge]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black

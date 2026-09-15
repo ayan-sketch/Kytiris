@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "IRISLite — FBR IRIS 2.0 Speed Booster",
+  "version": "2.0.0",
+  "description": "Accelerates FBR IRIS form by 10x via Webpack AES memoization and CSS optimization. Overrides custom window event listeners blocking standard browser accessibility/inspection tools.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "IRISLite Settings"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://iris.fbr.gov.pk/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://iris.fbr.gov.pk/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}

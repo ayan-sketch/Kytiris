@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Kytiris — FBR IRIS 2.0 Speed Booster",
-  "version": "2.0.0",
-  "description": "Accelerates FBR IRIS form by 10x via Webpack AES memoization and CSS optimization. Overrides custom window event listeners blocking standard browser accessibility/inspection tools.",
+  "version": "2.0.1",
+  "description": "Accelerates FBR IRIS form by 10x-15x via Webpack AES memoization and CSS optimization. Overrides custom window event listeners blocking standard browser accessibility/inspection tools.",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -14,15 +14,19 @@
   },
   "permissions": [
     "storage",
-    "activeTab"
+    "activeTab",
+    "scripting",
+    "tabs"
   ],
   "host_permissions": [
-    "https://iris.fbr.gov.pk/*"
+    "https://iris.fbr.gov.pk/*",
+    "http://iris.fbr.gov.pk/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://iris.fbr.gov.pk/*"
+        "https://iris.fbr.gov.pk/*",
+        "http://iris.fbr.gov.pk/*"
       ],
       "js": [
         "content.js"

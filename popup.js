@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load saved settings
   if (typeof chrome !== 'undefined' && chrome.storage && chrome.storage.local) {
     chrome.storage.local.get(defaultSettings, (settings) => {
-      applyToUI(settings);
+      applyToUI(settings || defaultSettings);
     });
   } else {
     try {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const [key, elId] of Object.entries(ids)) {
       const el = document.getElementById(elId);
       if (el) {
-        el.checked = !!settings[key];
+        el.checked = settings[key] !== false;
         el.addEventListener('change', saveAndSync);
       }
     }
@@ -56,20 +56,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Send update message to active IRIS tabs
     if (typeof chrome !== 'undefined' && chrome.tabs) {
-      chrome.tabs.query({ url: "https://iris.fbr.gov.pk/*" }, (tabs) => {
+      chrome.tabs.query({ url: "*://iris.fbr.gov.pk/*" }, (tabs) => {
+        if (!tabs || !tabs.length) return;
         tabs.forEach(tab => {
-          try {
-            chrome.scripting.executeScript({
-              target: { tabId: tab.id },
-              func: (settings) => {
-                window.postMessage({
-                  type: '__KYTIRIS_UPDATE_SETTINGS__',
-                  settings
-                }, '*');
-              },
-              args: [current]
-            });
-          } catch (e) {}
+          if (chrome.scripting && chrome.scripting.executeScript) {
+            try {
+              chrome.scripting.executeScript({
+                target: { tabId: tab.id },
+                world: 'MAIN',
+                func: (settings) => {
+                  window.postMessage({
+                    type: '__KYTIRIS_UPDATE_SETTINGS__',
+                    settings
+                  }, '*');
+                },
+                args: [current]
+              });
+            } catch (e) {}
+          }
         });
       });
     }
